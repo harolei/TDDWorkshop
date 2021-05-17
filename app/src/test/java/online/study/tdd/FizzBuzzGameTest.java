@@ -38,4 +38,14 @@ public class FizzBuzzGameTest {
         //then
         assertThat(result, is("buzz"));
     }
+
+    @Test
+    public void shouldReturnFizzBuzzGivenInputCanBeDividedBy3And5() {
+        //given
+        int inputNumber = 15;
+        //when
+        String result = fizzBuzzGame.handleInputNumber(inputNumber);
+        //then
+        assertThat(result, is("fizzbuzz"));
+    }
 }
