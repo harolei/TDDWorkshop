@@ -48,4 +48,44 @@ public class FizzBuzzGameTest {
         //then
         assertThat(result, is("fizzbuzz"));
     }
+
+    @Test
+    public void shouldReturnWhizzGivenInputCanBeDividedBy7() {
+        //given
+        int inputNumber = 7;
+        //when
+        String result = fizzBuzzGame.handleInputNumber(inputNumber);
+        //then
+        assertThat(result, is("whizz"));
+    }
+
+    @Test
+    public void shouldReturnFizzWhizzGivenInputCanBeDividedBy3And7() {
+        //given
+        int inputNumber = 21;
+        //when
+        String result = fizzBuzzGame.handleInputNumber(inputNumber);
+        //then
+        assertThat(result, is("fizzwhizz"));
+    }
+
+    @Test
+    public void shouldReturnBuzzWhizzGivenInputCanBeDividedBy5And7() {
+        //given
+        int inputNumber = 35;
+        //when
+        String result = fizzBuzzGame.handleInputNumber(inputNumber);
+        //then
+        assertThat(result, is("buzzwhizz"));
+    }
+
+    @Test
+    public void shouldReturnFizzBuzzWhizzGivenInputCanBeDividedBy3_5_7() {
+        //given
+        int inputNumber = 105;
+        //when
+        String result = fizzBuzzGame.handleInputNumber(inputNumber);
+        //then
+        assertThat(result, is("fizzbuzzwhizz"));
+    }
 }
