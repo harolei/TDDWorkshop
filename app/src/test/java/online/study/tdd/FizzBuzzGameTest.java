@@ -27,4 +27,15 @@ public class FizzBuzzGameTest {
         //then
         assertThat(result, is("fizz"));
     }
+
+    @Test
+    public void shouldReturnBuzzGivenInputCanBeDividedBy5() {
+        //given
+        int inputNumber = 5;
+        FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
+        //when
+        String result = fizzBuzzGame.handleInputNumber(inputNumber);
+        //then
+        assertThat(result, is("buzz"));
+    }
 }
