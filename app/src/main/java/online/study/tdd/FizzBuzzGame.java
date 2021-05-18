@@ -11,7 +11,7 @@ public class FizzBuzzGame {
 
     private String getFizzBuzz(int inputNumber) {
         String result = "";
-        if (inputNumber % 3 == 0) {
+        if (inputNumber % 3 == 0 || String.valueOf(inputNumber).contains("3")) {
             result += "fizz";
         }
         if (inputNumber % 5 == 0) {

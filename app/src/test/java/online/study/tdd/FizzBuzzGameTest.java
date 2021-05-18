@@ -72,7 +72,7 @@ public class FizzBuzzGameTest {
     @Test
     public void shouldReturnBuzzWhizzGivenInputCanBeDividedBy5And7() {
         //given
-        int inputNumber = 35;
+        int inputNumber = 70;
         //when
         String result = fizzBuzzGame.handleInputNumber(inputNumber);
         //then
@@ -88,4 +88,15 @@ public class FizzBuzzGameTest {
         //then
         assertThat(result, is("fizzbuzzwhizz"));
     }
+
+    @Test
+    public void shouldReturnFizzGivenNumberContains3() {
+        //given
+        int inputNumber = 13;
+        //when
+        String result = fizzBuzzGame.handleInputNumber(inputNumber);
+        //then
+        assertThat(result, is("fizz"));
+    }
+
 }
